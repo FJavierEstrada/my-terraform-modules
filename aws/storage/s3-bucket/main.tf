@@ -10,6 +10,6 @@ tags = var.tags
 resource "aws_s3_bucket_object" "bucket_object" {
 count = length(var.bucket_objects)
 
- bucket = module.this.output.this_s3_bucket_id
+ bucket = module.this.this_s3_bucket_id
 key = var.bucket_objects[count.index]
 }
